@@ -1,8 +1,8 @@
 <?php
 if(!defined('_ENV_'))
 	define('_ENV_', 'test');
-require_once(dirname(__FILE__).'/../../../coxis/core/core.php');
-Coxis::load();
+require_once(_CORE_DIR_.'core.php');
+\Coxis::load();
 
 class ActualiteAdminTest extends PHPUnit_Framework_TestCase {
 	public function setUp(){
