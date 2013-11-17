@@ -1,5 +1,5 @@
 <?php
-namespace App\News;
+namespace Coxis\News;
 
 class Bundle extends \Coxis\Core\BundleLoader {
 	public function run() {
