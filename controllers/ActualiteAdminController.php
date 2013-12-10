@@ -3,7 +3,7 @@
 @Prefix('admin/actualites')
 */
 class ActualiteAdminController extends \Coxis\Admin\Libs\Controller\ModelAdminController {
-	static $_model = 'actualite';
+	static $_model = 'Coxis\News\Models\Actualite';
 	static $_models = 'actualites';
 
 	function __construct() {
