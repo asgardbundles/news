@@ -2,8 +2,8 @@
 /**
 @Prefix('admin/actualites')
 */
-class ActualiteAdminController extends \Coxis\Admin\Libs\Controller\EntityAdminController {
-	static $_entity = 'Coxis\News\Entities\Actualite';
+class ActualiteAdminController extends \Asgard\Admin\Libs\Controller\EntityAdminController {
+	static $_entity = 'Asgard\News\Entities\Actualite';
 	static $_entities = 'actualites';
 
 	function __construct() {
@@ -18,7 +18,7 @@ class ActualiteAdminController extends \Coxis\Admin\Libs\Controller\EntityAdminC
 	}
 	
 	public function formConfigure($entity) {
-		$form = new \Coxis\Admin\Libs\Form\AdminEntityForm($entity, $this);
+		$form = new \Asgard\Admin\Libs\Form\AdminEntityForm($entity, $this);
 		
 		return $form;
 	}

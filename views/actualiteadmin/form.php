@@ -10,7 +10,7 @@
 					<a href="<?php echo !$actualite->isNew() ? $this->url_for('edit', array('id'=>$actualite->id)):$this->url_for('new') ?>">
 					<?php echo !$actualite->isNew() ? $actualite:__('New') ?>
 					</a></p>
-					<?php \Coxis\Core\Coxis\Core\App::get('flash')->showAll() ?>
+					<?php \Asgard\Core\Asgard\Core\App::get('flash')->showAll() ?>
 					
 					<?php
 					$form->open();

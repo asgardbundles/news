@@ -27,7 +27,7 @@
 						</div>	
 						<div class="block_content"> -->
 						
-							<?php \Coxis\Core\Coxis\Core\App::get('flash')->showAll() ?>
+							<?php \Asgard\Core\Asgard\Core\App::get('flash')->showAll() ?>
 						
 							<?php if(sizeof($actualites) == 0): ?>
 							<div style="text-align:center; font-weight:bold"><?php echo __('No element') ?></div>
@@ -52,7 +52,7 @@
 												<td><?php echo $actualite->created_at ?></td>
 												<td><a href="<?php echo $this->url_for('edit', array('id'=>$actualite->id)) ?>"><?php echo $actualite ?></a></td>
 												<td class="actions">
-													<?php \Hook::trigger('coxis_actualite_actions', $actualite, null, true) ?>
+													<?php \Hook::trigger('asgard_actualite_actions', $actualite, null, true) ?>
 													<a class="delete" href="<?php echo $this->url_for('delete', array('id'=>$actualite->id)) ?>"><?php echo __('Delete') ?></a>
 												</td>
 											</tr>

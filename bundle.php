@@ -1,10 +1,10 @@
 <?php
-namespace Coxis\News;
+namespace Asgard\News;
 
-class Bundle extends \Coxis\Core\BundleLoader {
+class Bundle extends \Asgard\Core\BundleLoader {
 	public function run() {
-		\Coxis\Admin\Libs\AdminMenu::instance()->menu[0]['childs'][] = array('label' => 'Actualites', 'link' => 'actualites');
-		\Coxis\Admin\Libs\AdminMenu::instance()->home[] = array('img'=>\Coxis\Core\Facades\Coxis\Core\App::get('url')->to('actualite/icon.svg'), 'link'=>'actualites', 'title' => __('News'), 'description' => __('Les actualités'));
+		\Asgard\Admin\Libs\AdminMenu::instance()->menu[0]['childs'][] = array('label' => 'Actualites', 'link' => 'actualites');
+		\Asgard\Admin\Libs\AdminMenu::instance()->home[] = array('img'=>\Asgard\Core\Facades\Asgard\Core\App::get('url')->to('actualite/icon.svg'), 'link'=>'actualites', 'title' => __('News'), 'description' => __('Les actualités'));
 		parent::run();
 	}
 }

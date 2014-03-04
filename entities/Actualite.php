@@ -1,5 +1,5 @@
 <?php
-class Actualite extends \Coxis\Core\Entity {
+class Actualite extends \Asgard\Core\Entity {
 	public static $properties = array(
 		'title',
 		'content'	=>	'longtext',
@@ -15,9 +15,9 @@ class Actualite extends \Coxis\Core\Entity {
 	);
 	
 	public static $behaviors = array(
-		'Coxis\Behaviors\PublishBehavior',
-		'Coxis\Behaviors\MetasBehavior',
-		'Coxis\Behaviors\SlugifyBehavior',
+		'Asgard\Behaviors\PublishBehavior',
+		'Asgard\Behaviors\MetasBehavior',
+		'Asgard\Behaviors\SlugifyBehavior',
 	);
 	
 	public function __toString() {
@@ -25,6 +25,6 @@ class Actualite extends \Coxis\Core\Entity {
 	}
 
 	public function url() {
-		return \Coxis\Core\App::get('url')->url_for(array('Actualite', 'show'), array('id'=>$this->id, 'slug'=>$this->slug));
+		return \Asgard\Core\App::get('url')->url_for(array('Actualite', 'show'), array('id'=>$this->id, 'slug'=>$this->slug));
 	}
 }
