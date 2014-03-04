@@ -6,11 +6,11 @@
 				</div>		<!-- .block_head ends -->
 				
 				<div class="block_content">
-					<p class="breadcrumb"><a href="<?php echo $this->url_for('index') ?>"><?php echo ucfirst($this::$_models) ?></a> &raquo; 
+					<p class="breadcrumb"><a href="<?php echo $this->url_for('index') ?>"><?php echo ucfirst($this::$_entities) ?></a> &raquo; 
 					<a href="<?php echo !$actualite->isNew() ? $this->url_for('edit', array('id'=>$actualite->id)):$this->url_for('new') ?>">
 					<?php echo !$actualite->isNew() ? $actualite:__('New') ?>
 					</a></p>
-					<?php \Coxis\Core\Flash::showAll() ?>
+					<?php \Coxis\Core\Coxis\Core\App::get('flash')->showAll() ?>
 					
 					<?php
 					$form->open();

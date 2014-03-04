@@ -2,9 +2,9 @@
 /**
 @Prefix('admin/actualites')
 */
-class ActualiteAdminController extends \Coxis\Admin\Libs\Controller\ModelAdminController {
-	static $_model = 'Coxis\News\Models\Actualite';
-	static $_models = 'actualites';
+class ActualiteAdminController extends \Coxis\Admin\Libs\Controller\EntityAdminController {
+	static $_entity = 'Coxis\News\Entities\Actualite';
+	static $_entities = 'actualites';
 
 	function __construct() {
 		$this->_messages = array(
@@ -17,8 +17,8 @@ class ActualiteAdminController extends \Coxis\Admin\Libs\Controller\ModelAdminCo
 		parent::__construct();
 	}
 	
-	public function formConfigure($model) {
-		$form = new \Coxis\Admin\Libs\Form\AdminModelForm($model, $this);
+	public function formConfigure($entity) {
+		$form = new \Coxis\Admin\Libs\Form\AdminEntityForm($entity, $this);
 		
 		return $form;
 	}

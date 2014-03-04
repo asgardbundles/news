@@ -2,7 +2,7 @@
 /**
 @Prefix('actualites')
 */
-class ActualiteController extends Controller {
+class ActualiteController extends \Coxis\Core\Controller {
 	/**
 	@Route('')
 	*/

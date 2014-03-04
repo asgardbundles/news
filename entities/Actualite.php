@@ -1,5 +1,5 @@
 <?php
-class Actualite extends \Coxis\Core\Model {
+class Actualite extends \Coxis\Core\Entity {
 	public static $properties = array(
 		'title',
 		'content'	=>	'longtext',
@@ -15,9 +15,9 @@ class Actualite extends \Coxis\Core\Model {
 	);
 	
 	public static $behaviors = array(
-		'publish',
-		'metas',
-		'slugify'
+		'Coxis\Behaviors\PublishBehavior',
+		'Coxis\Behaviors\MetasBehavior',
+		'Coxis\Behaviors\SlugifyBehavior',
 	);
 	
 	public function __toString() {
@@ -25,6 +25,6 @@ class Actualite extends \Coxis\Core\Model {
 	}
 
 	public function url() {
-		return \URL::url_for(array('Actualite', 'show'), array('id'=>$this->id, 'slug'=>$this->slug));
+		return \Coxis\Core\App::get('url')->url_for(array('Actualite', 'show'), array('id'=>$this->id, 'slug'=>$this->slug));
 	}
 }
