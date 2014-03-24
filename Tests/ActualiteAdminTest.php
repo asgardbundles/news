@@ -6,7 +6,7 @@ Asgard\Core\App::load();
 
 class ActualiteAdminTest extends PHPUnit_Framework_TestCase {
 	public function setUp(){
-		Asgard\DB\Schema::dropAll();
+		Asgard\Db\Schema::dropAll();
 		DB::import(dirname(__FILE__).'/news.sql');
 		Asgard\Core\BundlesManager::loadEntityFixturesAll();
 	}
