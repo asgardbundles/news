@@ -1,4 +1,6 @@
 <?php
+namespace Asgard\News\Controllers;
+
 /**
 @Prefix('admin/actualites')
 */
@@ -6,7 +8,7 @@ class ActualiteAdminController extends \Asgard\Admin\Libs\Controller\EntityAdmin
 	static $_entity = 'Asgard\News\Entities\Actualite';
 	static $_entities = 'actualites';
 
-	function __construct() {
+	public function __construct() {
 		$this->_messages = array(
 			'modified'			=>	__('Actualite modified with success.'),
 			'created'			=>	__('Actualite created with success.'),

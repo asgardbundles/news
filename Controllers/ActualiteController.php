@@ -1,4 +1,6 @@
 <?php
+namespace Asgard\News\Controllers;
+
 /**
 @Prefix('actualites')
 */

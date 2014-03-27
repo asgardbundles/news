@@ -1,4 +1,6 @@
 <?php
+namespace Asgard\News\Entities;
+
 class Actualite extends \Asgard\Core\Entity {
 	public static $properties = array(
 		'title',

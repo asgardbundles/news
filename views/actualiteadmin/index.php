@@ -52,7 +52,7 @@
 												<td><?php echo $actualite->created_at ?></td>
 												<td><a href="<?php echo $this->url_for('edit', array('id'=>$actualite->id)) ?>"><?php echo $actualite ?></a></td>
 												<td class="actions">
-													<?php \Hook::trigger('asgard_actualite_actions', $actualite, null, true) ?>
+													<?php \Asgard\Core\App::get('hook')->trigger('asgard_actualite_actions', $actualite, null, true) ?>
 													<a class="delete" href="<?php echo $this->url_for('delete', array('id'=>$actualite->id)) ?>"><?php echo __('Delete') ?></a>
 												</td>
 											</tr>
