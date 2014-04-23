@@ -5,7 +5,7 @@ namespace Asgard\News\Controllers;
 @Prefix('admin/actualites')
 */
 class ActualiteAdminController extends \App\Admin\Libs\Controller\EntityAdminController {
-	static $_entity = 'Asgard\News\Entities\Actualite';
+	static $_entity = 'App\News\Entities\Actualite';
 	static $_entities = 'actualites';
 
 	public function __construct() {
