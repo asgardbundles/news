@@ -7,5 +7,5 @@ require _CORE_DIR_.'core.php';
 \Asgard\Utils\FileManager::copy(__DIR__.'/tests/news', _DIR_.'tests/news');
 \Asgard\Utils\FileManager::copy(__DIR__.'/web/news', _DIR_.'web/news');
 
-\Asgard\Orm\ORMManager::addMigrationFile(__DIR__.'/migrations/News.php');
-\Asgard\Orm\ORMManager::migrate('News');
+\Asgard\Orm\MigrationsManager::addMigrationFile(__DIR__.'/migrations/News.php');
+\Asgard\Orm\MigrationsManager::migrate('News');
