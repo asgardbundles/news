@@ -20,6 +20,7 @@ class Actualite extends \Asgard\Core\Entity {
 		'Asgard\Behaviors\PublishBehavior',
 		'Asgard\Behaviors\MetasBehavior',
 		'Asgard\Behaviors\SlugifyBehavior',
+		'Asgard\Orm\OrmBehavior',
 	);
 	
 	public function __toString() {

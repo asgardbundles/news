@@ -4,7 +4,7 @@ namespace Asgard\News\Controllers;
 /**
 @Prefix('admin/actualites')
 */
-class ActualiteAdminController extends \Asgard\Admin\Libs\Controller\EntityAdminController {
+class ActualiteAdminController extends \App\Admin\Libs\Controller\EntityAdminController {
 	static $_entity = 'Asgard\News\Entities\Actualite';
 	static $_entities = 'actualites';
 
@@ -20,7 +20,7 @@ class ActualiteAdminController extends \Asgard\Admin\Libs\Controller\EntityAdmin
 	}
 	
 	public function formConfigure($entity) {
-		$form = new \Asgard\Admin\Libs\Form\AdminEntityForm($entity, $this);
+		$form = new \App\Admin\Libs\Form\AdminEntityForm($entity, $this);
 		
 		return $form;
 	}
