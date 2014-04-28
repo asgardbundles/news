@@ -3,8 +3,13 @@ namespace Asgard\News\Entities;
 
 class Actualite extends \Asgard\Core\Entity {
 	public static $properties = array(
-		'title',
-		'content'	=>	'longtext',
+		'title' => array(
+			'required' => true
+		),
+		'content' => array(
+			'type' => 'longtext',
+			'required' => true,
+		),
 		'image'	=>	array(
 			'type'	=>	'file',
 			'filetype'	=>	'image',
@@ -28,6 +33,6 @@ class Actualite extends \Asgard\Core\Entity {
 	}
 
 	public function url() {
-		return \Asgard\Core\App::get('url')->url_for(array('Actualite', 'show'), array('id'=>$this->id, 'slug'=>$this->slug));
+		return \Asgard\Core\App::get('url')->url_for(array('App\News\Controllers\ActualiteController', 'show'), array('id'=>$this->id, 'slug'=>$this->slug));
 	}
 }

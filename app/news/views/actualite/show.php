@@ -3,5 +3,5 @@
 	<?php if($actualite->image->exists()): ?>
 	<img src="<?php echo $actualite->image ?>" style="float:left; max-height:100px; margin-right:10px">
 	<?php endif ?>
-	<?php echo $actualite->raw('content') ?>
+	<?php echo $actualite->content ?>
 </p>

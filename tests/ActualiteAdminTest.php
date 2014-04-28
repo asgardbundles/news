@@ -1,11 +1,11 @@
 <?php
 namespace Asgard\News\Tests;
 
-class ActualiteAdminTest extends \PHPUnit_Framework_TestCase {
+class ActualiteAdminTest extends \Asgard\Core\Test {
 	public function test1() {
-		\App\News\Entities\Actualite::create(array('id'=>1, 'title'=>'test'));
+		\App\News\Entities\Actualite::create(array('id'=>1, 'title'=>'test', 'content'=>'test'));
 
-		$browser = new \Asgard\Utils\Browser;
+		$browser = $this->getBrowser();
 		$browser->setSession('admin_id', 1);
 
 		$browser->get('admin/actualites/1/edit');

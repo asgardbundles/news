@@ -7,6 +7,8 @@
 	}],
 	"require": {
         "asgard/core": "dev-master",
-        "asgard/admin": "dev-master"
+        "asgard/admin": "dev-master",
+        "asgard/ckeditor": "dev-master",
+        "asgard/seo": "dev-master"
 	}
 }

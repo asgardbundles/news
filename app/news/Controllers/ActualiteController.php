@@ -1,5 +1,5 @@
 <?php
-namespace Asgard\News\Controllers;
+namespace App\News\Controllers;
 
 /**
 @Prefix('actualites')
@@ -9,17 +9,17 @@ class ActualiteController extends \Asgard\Core\Controller {
 	@Route('')
 	*/
 	public function indexAction($request) {
-		$this->actualites = Actualite::published()->get();
+		$this->actualites = \App\News\Entities\Actualite::published()->get();
 	}
 
 	/**
 	@Route(':id/:slug')
 	*/
 	public function showAction($request) {
-		if(!($this->actualite = Actualite::loadPublished($request['id'])))
+		if(!($this->actualite = \App\News\Entities\Actualite::loadPublished($request['id'])))
 			$this->notfound();
 
 		$this->actualite->showMetas();
-		SEO::canonical($this, $this->actualite->url());
+		\Asgard\Seo\SEO::canonical($this, $this->actualite->url());
 	}
 }
