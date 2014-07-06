@@ -2,19 +2,19 @@
 				<div class="block_head">
 					<div class="bheadl"></div>
 					<div class="bheadr"></div>
-					<h2><a href="<?php echo $this->url_for('index') ?>"><?php echo ucfirst($_entities) ?></a></h2>
+					<h2><a href="<?php echo $this->url_for('index') ?>"><?php echo ucfirst($_plural) ?></a></h2>
 					<ul>
 						<li><a href="<?php echo $this->url_for('new') ?>"><?php echo __('Add') ?></a></li>
 					</ul>
 					<?php
-					$searchForm->open();
-					echo $searchForm->search->def(array(
+					echo $searchForm->open();
+					echo $searchForm['search']->def(array(
 						'attrs'	=>	array(
 							'class'	=>	'text',
 							'placeholder'	=>	'Search',
 						),
 					));
-					$searchForm->close();
+					echo $searchForm->close();
 					?>
 				</div>	
 				
@@ -52,7 +52,7 @@
 												<td><?php echo $one->created_at ?></td>
 												<td><a href="<?php echo $this->url_for('edit', array('id'=>$one->id)) ?>"><?php echo $one ?></a></td>
 												<td class="actions">
-													<?php \Asgard\Core\App::get('hook')->trigger('asgard_news_actions', $one, null, true) ?>
+													<?php \Asgard\Core\App::get('hook')->trigger('asgard_news_actions', $one) ?>
 													<a class="delete" href="<?php echo $this->url_for('delete', array('id'=>$one->id)) ?>"><?php echo __('Delete') ?></a>
 												</td>
 											</tr>

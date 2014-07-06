@@ -1,5 +1,5 @@
 <?php
-namespace Asgard\News\Entities;
+namespace News\Entities;
 
 class News extends \Asgard\Entity\Entity {
 	public static function definition($definition) {

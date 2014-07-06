@@ -1,12 +1,12 @@
 <?php
-namespace Controllers;
+namespace News\Controllers;
 
 /**
  * @Prefix("admin/news")
  */
 class NewsAdminController extends \Admin\Libs\Controller\EntityAdminController {
-	protected $_entity = 'News\Entities\News';
-	protected $_entities = 'news';
+	public $_entity = 'News\Entities\News';
+	public $_plural = 'news';
 
 	public function __construct() {
 		$this->_messages = array(
