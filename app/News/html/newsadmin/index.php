@@ -27,9 +27,9 @@
 						</div>	
 						<div class="block_content"> -->
 						
-							<?php \Asgard\Core\App::get('flash')->showAll() ?>
+							<?php $this->getFlash()->showAll() ?>
 						
-							<?php if(sizeof($actualites) == 0): ?>
+							<?php if(count($news) == 0): ?>
 							<div style="text-align:center; font-weight:bold"><?php echo __('No element') ?></div>
 							<?php else: ?>
 							<form action="" method="post">
@@ -46,14 +46,14 @@
 									
 									<tbody>
 										<?php
-										foreach($actualites as $actualite) { ?>								
+										foreach($news as $one) { ?>								
 											<tr>
-												<td><input type="checkbox" name="id[]" value="<?php echo $actualite->id ?>" /></td>
-												<td><?php echo $actualite->created_at ?></td>
-												<td><a href="<?php echo $this->url_for('edit', array('id'=>$actualite->id)) ?>"><?php echo $actualite ?></a></td>
+												<td><input type="checkbox" name="id[]" value="<?php echo $one->id ?>" /></td>
+												<td><?php echo $one->created_at ?></td>
+												<td><a href="<?php echo $this->url_for('edit', array('id'=>$one->id)) ?>"><?php echo $one ?></a></td>
 												<td class="actions">
-													<?php \Asgard\Core\App::get('hook')->trigger('asgard_actualite_actions', $actualite, null, true) ?>
-													<a class="delete" href="<?php echo $this->url_for('delete', array('id'=>$actualite->id)) ?>"><?php echo __('Delete') ?></a>
+													<?php \Asgard\Core\App::get('hook')->trigger('asgard_news_actions', $one, null, true) ?>
+													<a class="delete" href="<?php echo $this->url_for('delete', array('id'=>$one->id)) ?>"><?php echo __('Delete') ?></a>
 												</td>
 											</tr>
 										<?php } ?>

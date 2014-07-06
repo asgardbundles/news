@@ -1,4 +1,4 @@
-Asgard\News\Entities\Actualite:
+News\Entities\News:
     - id: 1
       title: test5
       content: test5

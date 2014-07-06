@@ -6,9 +6,7 @@
 		"email": "michel@hognerud.net"
 	}],
 	"require": {
-        "asgard/core": "dev-master",
-        "asgard/admin": "dev-master",
-        "asgard/ckeditor": "dev-master",
-        "asgard/seo": "dev-master"
+        "asgard/entityimage": "dev-master",
+        "asgard/asgard": "dev-master"
 	}
 }

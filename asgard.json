@@ -1,0 +1,7 @@
+{
+	"name": "asgard/news",
+	"require": {
+		"asgard/admin": "git@github.com:asgardphp/admin.git",
+        "asgard/wysiwyg": "git@github.com:asgardbundles/wysiwyg.git"
+	}
+}

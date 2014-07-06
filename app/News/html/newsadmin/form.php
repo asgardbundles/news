@@ -2,18 +2,18 @@
 				<div class="block_head">
 					<div class="bheadl"></div>
 					<div class="bheadr"></div>
-					<h2><?php echo !$actualite->isNew() ? $actualite:__('New') ?></h2>
+					<h2><?php echo !$news->isNew() ? $news:__('New') ?></h2>
 				</div>		<!-- .block_head ends -->
 				
 				<div class="block_content">
 					<p class="breadcrumb"><a href="<?php echo $this->url_for('index') ?>"><?php echo ucfirst($_entities) ?></a> &raquo; 
-					<a href="<?php echo !$actualite->isNew() ? $this->url_for('edit', array('id'=>$actualite->id)):$this->url_for('new') ?>">
-					<?php echo !$actualite->isNew() ? $actualite:__('New') ?>
+					<a href="<?php echo !$news->isNew() ? $this->url_for('edit', array('id'=>$news->id)):$this->url_for('new') ?>">
+					<?php echo !$news->isNew() ? $news:__('New') ?>
 					</a></p>
-					<?php \Asgard\Core\App::get('flash')->showAll() ?>
+					<?php $this->getFlash()->showAll() ?>
 					
 					<?php
-					$form->open();
+					echo $form->open();
 					echo
 					$form->title->def().
 					$form->published->def().
@@ -22,7 +22,7 @@
 					$form->meta_title->def().
 					$form->meta_description->def().
 					$form->meta_keywords->def();
-					$form->close();
+					echo $form->close();
 					?>
 					
 				</div>		<!-- .block_content ends -->
