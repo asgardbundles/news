@@ -1,7 +1,7 @@
 {
 	"name": "asgard/news",
 	"require": {
-		"asgard/admin": "C:\\Users\\leyou\\Documents\\projects\\asgard\\bundles\\admin",
-        "asgard/wysiwyg": "C:\\Users\\leyou\\Documents\\projects\\asgard\\bundles\\wysiwyg"
+		"asgard/admin": "git@github.com:asgardbundles/admin.git",
+        "asgard/wysiwyg": "git@github.com:asgardbundles/wysiwyg.git"
 	}
 }

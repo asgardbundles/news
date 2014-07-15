@@ -14,14 +14,13 @@
 					
 					<?php
 					echo $form->open();
-					echo
-					$form->title->def().
-					$form->published->def().
-					$form->content->wysiwyg().
-					$form->image->def().
-					$form->meta_title->def().
-					$form->meta_description->def().
-					$form->meta_keywords->def();
+					echo $form['title']->def();
+					echo $form['published']->def();
+					echo $form['content']->wysiwyg();
+					echo $form['image']->def();
+					echo $form['meta_title']->def();
+					echo $form['meta_description']->def();
+					echo $form['meta_keywords']->def();
 					echo $form->close();
 					?>
 					
