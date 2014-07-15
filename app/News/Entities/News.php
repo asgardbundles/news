@@ -2,7 +2,7 @@
 namespace News\Entities;
 
 class News extends \Asgard\Entity\Entity {
-	public static function definition($definition) {
+	public static function definition(\Asgard\Entity\EntityDefinition $definition) {
 		$definition->properties = array(
 			'title' => array(
 				'required' => true
