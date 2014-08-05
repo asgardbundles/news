@@ -1,8 +1,8 @@
 <?php
 class News extends \Asgard\Migration\DBMigration {
 	public function up() {
-		$table = $this->app['config']['database.prefix'].'news';
-		$this->app['schema']->create($table, function($table) {
+		$table = $this->container['config']['database.prefix'].'news';
+		$this->container['schema']->create($table, function($table) {
 			$table->add('id', 'int(11)')
 				->autoincrement()
 				->primary();	
@@ -30,6 +30,6 @@ class News extends \Asgard\Migration\DBMigration {
 	}
 	
 	public function down() {
-		$this->app['schema']->drop($this->app['config']['database.prefix'].'news');
+		$this->container['schema']->drop($this->container['config']['database.prefix'].'news');
 	}
 }
