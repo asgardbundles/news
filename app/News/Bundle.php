@@ -11,7 +11,7 @@ class Bundle extends \Asgard\Core\BundleLoader {
 				'link' => $chain->app['resolver']->url_for(['News\Controllers\NewsAdminController', 'index']),
 			], '0.');
 			$chain->app['adminMenu']->addHome([
-				'img' => $request->url->to('news/icon.svg'),
+				'img' => $request->url->to('bundles/news/icon.svg'),
 				'link' => $chain->app['resolver']->url_for(['News\Controllers\NewsAdminController', 'index']),
 				'title' => __('News'),
 				'description' => __('All the news.')
