@@ -20,7 +20,7 @@ class NewsAdminController extends \Admin\Libs\Controller\EntityAdminController {
 	}
 	
 	public function formConfigure($entity) {
-		$form = $this->app->make('adminEntityForm', [$entity, $this]);
+		$form = $this->container->make('adminEntityForm', [$entity, $this]);
 		
 		return $form;
 	}

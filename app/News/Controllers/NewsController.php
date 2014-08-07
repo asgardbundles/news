@@ -9,7 +9,7 @@ class NewsController extends \Asgard\Http\Controller {
 	 * @Route("")
 	 */
 	public function indexAction(\Asgard\Http\Request $request) {
-		$this->news = \News\Entities\News::published()->get();
+		$this->list = \News\Entities\News::published()->get();
 	}
 
 	/**
