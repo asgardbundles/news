@@ -52,7 +52,7 @@
 												<td><?php echo $one->created_at ?></td>
 												<td><a href="<?php echo $this->url_for('edit', array('id'=>$one->id)) ?>"><?php echo $one ?></a></td>
 												<td class="actions">
-													<?php \Asgard\Core\App::get('hook')->trigger('asgard_news_actions', $one) ?>
+													<?php $this->container['hooks']->trigger('asgard_news_actions', [$one]) ?>
 													<a class="delete" href="<?php echo $this->url_for('delete', array('id'=>$one->id)) ?>"><?php echo __('Delete') ?></a>
 												</td>
 											</tr>
@@ -63,8 +63,8 @@
 								<div class="tableactions">
 									<select name="action">
 										<option>Actions</option>
-										<?php foreach($globalactions as $action): ?>
-										<option value="<?php echo $action['value'] ?>"><?php echo $action['text'] ?></option>
+										<?php foreach($globalactions as $name=>$action): ?>
+										<option value="<?=$name ?>"><?=$action['text'] ?></option>
 										<?php endforeach ?>
 									</select>
 									<input type="submit" class="submit tiny" value="<?php echo __('Apply') ?>" />

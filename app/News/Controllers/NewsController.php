@@ -20,6 +20,5 @@ class NewsController extends \Asgard\Http\Controller {
 			$this->notFound();
 
 		$this->news->showMetas();
-		\Asgard\Seo\SEO::canonical($this, $this->news->url());
 	}
 }

@@ -1,7 +1,14 @@
 <?php
-class NewsAdminTest extends \Asgard\Http\Test {
+class NewsTest extends \Asgard\Http\Test {
 	public function test() {
-		News\Entities\News::create(array('id'=>1, 'title'=>'test', 'content'=>'test'));
+		copy(__DIR__.'/fixtures/image.jpg', __DIR__.'/fixtures/file.jpg');
+		$image = new \Asgard\Entityimage\Image(__DIR__.'/fixtures/file.jpg');
+		News\Entities\News::create(array('id'=>1, 'title'=>'test', 'content'=>'test', 'image'=>$image));
+		
+		#front
+		$browser = $this->getBrowser();
+		$this->assertTrue($browser->get('news')->isOK(), 'GET news');
+		$this->assertTrue($browser->get('news/1/test')->isOK(), 'GET news/:id/:slug');
 
 		#admin
 		$browser = $this->getBrowser();
@@ -14,12 +21,6 @@ class NewsAdminTest extends \Asgard\Http\Test {
 
 		$this->assertTrue($browser->get('admin/news/1/edit/en')->isOK(), 'GET admin/news/:id/edit/:locale');
 		$this->assertTrue($browser->get('admin/news/new')->isOK(), 'GET admin/news/new');
-		$this->assertTrue($browser->get('news/1/test')->isOK(), 'GET news/:id/:slug');
 		$this->assertTrue($browser->get('admin/news/1/delete')->isOK(), 'GET admin/news/:id/delete');
-		
-		#front
-		$browser = $this->getBrowser();
-		$this->assertTrue($browser->get('news')->isOK(), 'GET news');
-		
 	}
 }
