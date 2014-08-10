@@ -23,7 +23,7 @@ class News extends \Asgard\Entity\Entity {
 			new \Asgard\Behaviors\PublishBehavior,
 			new \Asgard\Behaviors\MetasBehavior,
 			new \Asgard\Behaviors\SlugifyBehavior,
-			new \Asgard\Orm\OrmBehavior,
+			new \Asgard\Orm\ORMBehavior,
 		);
 	}
 	
