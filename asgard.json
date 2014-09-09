@@ -1,7 +1,7 @@
 {
 	"name": "asgard/news",
 	"require": {
-		"asgard/admin": "https://github.com/asgardbundles/admin.git",
-        "asgard/wysiwyg": "https://github.com/asgardbundles/wysiwyg.git"
+		"asgard/admin": "https://github.com/asgardbundles/admin.git=v0.1.0",
+        "asgard/wysiwyg": "https://github.com/asgardbundles/wysiwyg.git=v0.1.0"
 	}
 }
