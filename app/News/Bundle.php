@@ -2,7 +2,7 @@
 namespace News;
 
 class Bundle extends \Asgard\Core\BundleLoader {
-	public function run($container) {
+	public function run(\Asgard\Container\Container $container) {
 		parent::run($container);
 
 		$container['hooks']->hook('Asgard.Http.Start', function($chain, $request) {

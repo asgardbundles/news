@@ -52,7 +52,7 @@
 												<td><?php echo $one->created_at ?></td>
 												<td><a href="<?php echo $this->url_for('edit', array('id'=>$one->id)) ?>"><?php echo $one ?></a></td>
 												<td class="actions">
-													<?php $this->container['hooks']->trigger('asgard_news_actions', [$one]) ?>
+													<?php $this->container['hooks']->trigger('asgard_actions', [$one]) ?>
 													<a class="delete" href="<?php echo $this->url_for('delete', array('id'=>$one->id)) ?>"><?php echo __('Delete') ?></a>
 												</td>
 											</tr>
