@@ -6,8 +6,8 @@
 				</div>		<!-- .block_head ends -->
 				
 				<div class="block_content">
-					<p class="breadcrumb"><a href="<?php echo $this->url_for('index') ?>"><?php echo ucfirst($_plural) ?></a> &raquo; 
-					<a href="<?php echo !$news->isNew() ? $this->url_for('edit', array('id'=>$news->id)):$this->url_for('new') ?>">
+					<p class="breadcrumb"><a href="<?php echo $this->url('index') ?>"><?php echo ucfirst($_plural) ?></a> &raquo; 
+					<a href="<?php echo !$news->isNew() ? $this->url('edit', array('id'=>$news->id)):$this->url('new') ?>">
 					<?php echo !$news->isNew() ? $news:__('New') ?>
 					</a></p>
 					<?php $this->getFlash()->showAll() ?>

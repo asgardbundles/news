@@ -2,9 +2,9 @@
 				<div class="block_head">
 					<div class="bheadl"></div>
 					<div class="bheadr"></div>
-					<h2><a href="<?php echo $this->url_for('index') ?>"><?php echo ucfirst($_plural) ?></a></h2>
+					<h2><a href="<?php echo $this->url('index') ?>"><?php echo ucfirst($_plural) ?></a></h2>
 					<ul>
-						<li><a href="<?php echo $this->url_for('new') ?>"><?php echo __('Add') ?></a></li>
+						<li><a href="<?php echo $this->url('new') ?>"><?php echo __('Add') ?></a></li>
 					</ul>
 					<?php
 					echo $searchForm->open();
@@ -50,10 +50,10 @@
 											<tr>
 												<td><input type="checkbox" name="id[]" value="<?php echo $one->id ?>" /></td>
 												<td><?php echo $one->created_at ?></td>
-												<td><a href="<?php echo $this->url_for('edit', array('id'=>$one->id)) ?>"><?php echo $one ?></a></td>
+												<td><a href="<?php echo $this->url('edit', array('id'=>$one->id)) ?>"><?php echo $one ?></a></td>
 												<td class="actions">
 													<?php $this->container['hooks']->trigger('asgard_actions', [$one]) ?>
-													<a class="delete" href="<?php echo $this->url_for('delete', array('id'=>$one->id)) ?>"><?php echo __('Delete') ?></a>
+													<a class="delete" href="<?php echo $this->url('delete', array('id'=>$one->id)) ?>"><?php echo __('Delete') ?></a>
 												</td>
 											</tr>
 										<?php } ?>

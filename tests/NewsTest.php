@@ -6,12 +6,12 @@ class NewsTest extends \Asgard\Http\Test {
 		News\Entities\News::create(array('id'=>1, 'title'=>'test', 'content'=>'test', 'image'=>$image));
 		
 		#front
-		$browser = $this->getBrowser();
+		$browser = $this->createBrowser();
 		$this->assertTrue($browser->get('news')->isOK(), 'GET news');
 		$this->assertTrue($browser->get('news/1/test')->isOK(), 'GET news/:id/:slug');
 
 		#admin
-		$browser = $this->getBrowser();
+		$browser = $this->createBrowser();
 		$browser->getSession()->set('admin_id', 1);
 
 		$this->assertTrue($browser->get('admin/news')->isOK(), 'GET admin/news');

@@ -2,17 +2,17 @@
 namespace News;
 
 class Bundle extends \Asgard\Core\BundleLoader {
-	public function run(\Asgard\Container\Container $container) {
+	public function run(\Asgard\Container\ContainerInterface $container) {
 		parent::run($container);
 
 		$container['hooks']->hook('Asgard.Http.Start', function($chain, $request) {
-			$chain->container['adminMenu']->add([
+			$chain->getContainer()['adminMenu']->add([
 				'label' => __('News'),
-				'link' => $chain->container['resolver']->url_for(['News\Controllers\NewsAdminController', 'index']),
+				'link' => $chain->getContainer()['resolver']->url(['News\Controllers\NewsAdminController', 'index']),
 			], '0.');
-			$chain->container['adminMenu']->addHome([
+			$chain->getContainer()['adminMenu']->addHome([
 				'img' => $request->url->to('bundles/news/icon.svg'),
-				'link' => $chain->container['resolver']->url_for(['News\Controllers\NewsAdminController', 'index']),
+				'link' => $chain->getContainer()['resolver']->url(['News\Controllers\NewsAdminController', 'index']),
 				'title' => __('News'),
 				'description' => __('All the news.')
 			]);

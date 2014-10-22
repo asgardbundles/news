@@ -2,7 +2,7 @@
 namespace News\Entities;
 
 class News extends \Asgard\Entity\Entity {
-	public static function definition(\Asgard\Entity\EntityDefinition $definition) {
+	public static function definition(\Asgard\Entity\Definition $definition) {
 		$definition->properties = array(
 			'title' => array(
 				'required' => true
@@ -32,6 +32,6 @@ class News extends \Asgard\Entity\Entity {
 	}
 
 	public function url() {
-		return \Asgard\Container\Container::singleton()['resolver']->url_for(array('News\Controllers\NewsController', 'show'), array('id'=>$this->id, 'slug'=>$this->slug()));
+		return \Asgard\Container\Container::singleton()['resolver']->url(array('News\Controllers\NewsController', 'show'), array('id'=>$this->id, 'slug'=>$this->slug()));
 	}
 }
