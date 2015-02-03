@@ -1,12 +1,12 @@
 {
-	"name": "asgard/news",
-	"license": "MIT",
-	"authors": [{
-		"name": "Michel Hognerud",
-		"email": "michel@hognerud.net"
-	}],
-	"require": {
+    "name": "asgard/news",
+    "license": "MIT",
+    "authors": [{
+        "name": "Michel Hognerud",
+        "email": "michel@hognerud.net"
+    }],
+    "require": {
         "asgard/entityimage": "0.*",
         "asgard/asgard": "0.*"
-	}
+    }
 }
