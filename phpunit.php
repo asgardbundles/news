@@ -33,10 +33,8 @@ $kernel->load();
 
 #DB
 $container['config']->set('database', [
-	'host' => 'localhost',
-	'user' => 'root',
-	'password' => '',
-	'database' => 'asgard'
+	'driver' => 'sqlite',
+	'database' => ':memory:',
 ]);
 
 #set the EntitiesManager static instance for activerecord-like entities (e.g. new Article or Article::find())
