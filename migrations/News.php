@@ -4,7 +4,7 @@ class News extends \Asgard\Migration\DBMigration {
 		$table = $this->container['config']['database.prefix'].'news';
 		$this->container['schema']->create($table, function($table) {
 			$table->addColumn('id', 'integer', [
-				'integer' => 11,
+				'length' => 11,
 				'autoincrement' => true,
 			]);
 			$table->addColumn('published', 'integer', [
