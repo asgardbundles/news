@@ -7,8 +7,7 @@ class News extends \Asgard\Migration\DBMigration {
 				'integer' => 11,
 				'autoincrement' => true,
 			]);
-			$table->addColumn('published', 'string', [
-				'type' => 'integer',
+			$table->addColumn('published', 'integer', [
 				'length' => '1',
 			]);
 			$table->addColumn('meta_title', 'string', [
