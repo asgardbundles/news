@@ -8,7 +8,8 @@ class News extends \Asgard\Migration\DBMigration {
 				'autoincrement' => true,
 			]);
 			$table->addColumn('published', 'string', [
-				'length' => 255
+				'type' => 'integer',
+				'length' => '1',
 			]);
 			$table->addColumn('meta_title', 'string', [
 				'length' => 255
@@ -22,15 +23,15 @@ class News extends \Asgard\Migration\DBMigration {
 			$table->addColumn('slug', 'string', [
 				'length' => 255
 			]);
-			$table->addColumn('created_at', 'datetime');
-			$table->addColumn('updated_at', 'datetime');
 			$table->addColumn('title', 'string', [
 				'length' => 255
 			]);
 			$table->addColumn('content', 'text');
-			$table->addColumn('password', 'string', [
+			$table->addColumn('image', 'string', [
 				'length' => 255
 			]);
+
+			$table->setPrimaryKey(['id']);
 		});
 	}
 	
