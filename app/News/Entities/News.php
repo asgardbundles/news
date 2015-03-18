@@ -8,7 +8,7 @@ class News extends \Asgard\Entity\Entity {
 				'required' => true
 			),
 			'content' => array(
-				'type' => 'longtext',
+				'type' => 'text',
 				'required' => true,
 			),
 			'image'	=>	array(
