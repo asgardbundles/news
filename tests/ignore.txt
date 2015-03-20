@@ -1,0 +1,7 @@
+News\Controllers\NewsController:index
+News\Controllers\NewsController:show
+News\Controllers\NewsAdminController:index
+News\Controllers\NewsAdminController:edit
+News\Controllers\NewsAdminController:editLocale
+News\Controllers\NewsAdminController:new
+News\Controllers\NewsAdminController:delete
