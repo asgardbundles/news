@@ -2,7 +2,7 @@
 class News extends \Asgard\Migration\DBMigration {
 	public function up() {
 		$table = $this->container['config']['database.prefix'].'news';
-		$this->container['schema']->create($table, function($table) {
+		$this->schema->create($table, function($table) {
 			$table->addColumn('id', 'integer', [
 				'length' => 11,
 				'autoincrement' => true,
@@ -35,6 +35,6 @@ class News extends \Asgard\Migration\DBMigration {
 	}
 	
 	public function down() {
-		$this->container['schema']->drop($this->container['config']['database.prefix'].'news');
+		$this->schema->drop($this->container['config']['database.prefix'].'news');
 	}
 }
