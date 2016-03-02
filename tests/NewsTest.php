@@ -21,6 +21,6 @@ class NewsTest extends \Asgard\Http\Test {
 
 		$this->assertTrue($browser->get('admin/news/1/edit/en')->isOK(), 'GET admin/news/:id/edit/:locale');
 		$this->assertTrue($browser->get('admin/news/new')->isOK(), 'GET admin/news/new');
-		$this->assertTrue($browser->get('admin/news/1/delete')->isOK(), 'GET admin/news/:id/delete');
+		$this->assertEquals(302, $browser->get('admin/news/1/delete')->getCode(), 'GET admin/news/:id/delete');
 	}
 }
