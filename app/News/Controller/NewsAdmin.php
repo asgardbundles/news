@@ -1,11 +1,11 @@
 <?php
-namespace News\Controllers;
+namespace News\Controller;
 
 /**
  * @Prefix("admin/news")
  */
-class NewsAdminController extends \Admin\Libs\Controller\EntityAdminController {
-	public $_entity = 'News\Entities\News';
+class NewsAdmin extends \Admin\Libs\Controller\EntityAdminController {
+	public $_entity = 'News\Entity\News';
 	public $_plural = 'news';
 
 	public function __construct() {

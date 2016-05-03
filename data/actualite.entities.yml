@@ -1,4 +1,4 @@
-News\Entities\News:
+News\Entity\News:
     - id: 1
       title: test5
       content: test5

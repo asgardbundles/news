@@ -1,5 +1,5 @@
 <?php
-namespace News\Entities;
+namespace News\Entity;
 
 class News extends \Asgard\Entity\Entity {
 	public static function definition(\Asgard\Entity\Definition $definition) {
@@ -32,6 +32,6 @@ class News extends \Asgard\Entity\Entity {
 	}
 
 	public function url() {
-		return \Asgard\Container\Container::singleton()['resolver']->url(array('News\Controllers\NewsController', 'show'), array('id'=>$this->id, 'slug'=>$this->slug()));
+		return \Asgard\Container\Container::singleton()['resolver']->url(array('News\Controller\News', 'show'), array('id'=>$this->id, 'slug'=>$this->slug()));
 	}
 }

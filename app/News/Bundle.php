@@ -8,11 +8,11 @@ class Bundle extends \Asgard\Core\BundleLoader {
 		$container['hooks']->hook('Asgard.Http.Start', function($chain, $request) {
 			$chain->getContainer()['adminMenu']->add([
 				'label' => __('News'),
-				'link' => $chain->getContainer()['resolver']->url(['News\Controllers\NewsAdminController', 'index']),
+				'link' => $chain->getContainer()['resolver']->url(['News\Controller\NewsAdmin', 'index']),
 			], '0.');
 			$chain->getContainer()['adminMenu']->addHome([
 				'img' => $request->url->to('bundles/news/icon.svg'),
-				'link' => $chain->getContainer()['resolver']->url(['News\Controllers\NewsAdminController', 'index']),
+				'link' => $chain->getContainer()['resolver']->url(['News\Controller\NewsAdmin', 'index']),
 				'title' => __('News'),
 				'description' => __('All the news.')
 			]);

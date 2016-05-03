@@ -3,7 +3,7 @@ class NewsTest extends \Asgard\Http\Test {
 	public function test() {
 		copy(__DIR__.'/fixtures/image.jpg', __DIR__.'/fixtures/file.jpg');
 		$image = new \Asgard\Entityimage\Image(__DIR__.'/fixtures/file.jpg');
-		News\Entities\News::create(array('id'=>1, 'title'=>'test', 'content'=>'test', 'image'=>$image));
+		News\Entity\News::create(array('id'=>1, 'title'=>'test', 'content'=>'test', 'image'=>$image));
 		
 		#front
 		$browser = $this->createBrowser();
