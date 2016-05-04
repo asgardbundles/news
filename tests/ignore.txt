@@ -1,7 +1,7 @@
-News\Controller\NewsController:index
-News\Controller\NewsController:show
-News\Controller\NewsAdminController:index
-News\Controller\NewsAdminController:edit
-News\Controller\NewsAdminController:editLocale
-News\Controller\NewsAdminController:new
-News\Controller\NewsAdminController:delete
+News\Controller\News:index
+News\Controller\News:show
+News\Controller\NewsAdmin:index
+News\Controller\NewsAdmin:edit
+News\Controller\NewsAdmin:editLocale
+News\Controller\NewsAdmin:new
+News\Controller\NewsAdmin:delete
