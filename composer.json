@@ -6,7 +6,10 @@
         "email": "michel@hognerud.net"
     }],
     "require": {
-        "asgard/entityimage": "0.*",
-        "asgard/asgard": "0.*"
+        "php": ">=5.5.9"
+    },
+    "require": {
+        "asgard/entityimage": "~0.3.0",
+        "asgard/asgard": "~0.3.0"
     }
 }
